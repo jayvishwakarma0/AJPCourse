@@ -33,7 +33,7 @@ public class Test {
         NewStudent s2 = new NewStudent(2,"Nimita",740);
         NewStudent s3 = new NewStudent(3,"Ashneer",800);
         NewStudent s4 = new NewStudent(4,"Dipender",600);
-//
+
 
         List<NewStudent> list2 = new ArrayList<>();
         list2.add(s4);
