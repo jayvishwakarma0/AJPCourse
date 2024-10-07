@@ -12,27 +12,30 @@ public class EmployeeServicesImpl implements EmployeeServices{
     @Override
     public String registerEmp(Employee emp) throws EmployeeException {
         String msg = dao.registerEmp(emp);
-
         return msg;
     }
 
     @Override
     public List<Employee> getAllEmp() throws EmployeeException {
-        return null;
+        List<Employee> allEmp = dao.getAllEmp();
+        return allEmp;
     }
 
     @Override
     public Employee getEmpById(int id) throws EmployeeException {
-        return null;
+        Employee emp = dao.getEmpById(id);
+        return emp;
     }
 
     @Override
     public String updateEmp(Employee emp) throws EmployeeException {
-        return null;
+        String msg = dao.updateEmp(emp);
+        return msg;
     }
 
     @Override
-    public Employee deleteEmp(int id) throws EmployeeException {
-        return null;
+    public Employee deleteEmp(int eid) throws EmployeeException {
+        Employee emp = dao.deleteEmp(eid);
+        return emp;
     }
 }
