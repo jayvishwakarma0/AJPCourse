@@ -20,7 +20,7 @@ public class FacultyDaoImpl implements FacultyDao{
             PreparedStatement ps = con.prepareStatement(query.insertFaculty())){
             ps.setString(1, faculty.getFacultyName());
             ps.setString(2, faculty.getFacultyAddress());
-            ps.setInt(3, faculty.getMobileNo());
+            ps.setString(3, faculty.getMobileNo());
             ps.setString(4, faculty.getEmail());
             ps.setString(5, faculty.getUsername());
             ps.setString(6, faculty.getPassword());
@@ -46,7 +46,7 @@ public class FacultyDaoImpl implements FacultyDao{
                 faculty.setFacultyId(rs.getInt("facultyId"));
                 faculty.setFacultyName(rs.getString("facultyName"));
                 faculty.setFacultyAddress(rs.getString("facultyAddress"));
-                faculty.setMobileNo(rs.getInt("mobileNo"));
+                faculty.setMobileNo(rs.getString("mobileNo"));
                 faculty.setEmail(rs.getString("email"));
                 faculty.setUsername(rs.getString("username"));
                 faculty.setPassword(rs.getString("password"));
@@ -68,7 +68,7 @@ public class FacultyDaoImpl implements FacultyDao{
                 faculty.setFacultyId(rs.getInt("facultyId"));
                 faculty.setFacultyName(rs.getString("facultyName"));
                 faculty.setFacultyAddress(rs.getString("facultyAddress"));
-                faculty.setMobileNo(rs.getInt("mobileNo"));
+                faculty.setMobileNo(rs.getString("mobileNo"));
                 faculty.setEmail(rs.getString("email"));
                 faculty.setUsername(rs.getString("username"));
                 faculty.setPassword(rs.getString("password"));
@@ -115,7 +115,7 @@ public class FacultyDaoImpl implements FacultyDao{
             PreparedStatement ps = con.prepareStatement(query.updateFaculty())){
             ps.setString(1, faculty.getFacultyName());
             ps.setString(2, faculty.getFacultyAddress());
-            ps.setInt(3, faculty.getMobileNo());
+            ps.setString(3, faculty.getMobileNo());
             ps.setString(4, faculty.getEmail());
             ps.setString(5, faculty.getUsername());
             ps.setString(6, faculty.getPassword());

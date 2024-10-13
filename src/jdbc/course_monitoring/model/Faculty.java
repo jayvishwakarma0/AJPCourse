@@ -4,7 +4,7 @@ public class Faculty {
     private int facultyId;
     private String facultyName;
     private String facultyAddress;
-    private int mobileNo;
+    private String mobileNo;
     private String email;
     private String username;
     private String password;
@@ -12,7 +12,7 @@ public class Faculty {
     public Faculty() {
     }
 
-    public Faculty(String facultyName,String facultyAddress, int mobileNo, String email, String username, String password) {
+    public Faculty(String facultyName,String facultyAddress, String mobileNo, String email, String username, String password) {
         this.facultyName = facultyName;
         this.facultyAddress = facultyAddress;
         this.mobileNo = mobileNo;
@@ -45,11 +45,11 @@ public class Faculty {
         facultyAddress = facultyAddress;
     }
 
-    public int getMobileNo() {
+    public String getMobileNo() {
         return mobileNo;
     }
 
-    public void setMobileNo(int mobileNo) {
+    public void setMobileNo(String mobileNo) {
         this.mobileNo = mobileNo;
     }
 
