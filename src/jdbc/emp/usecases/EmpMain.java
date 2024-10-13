@@ -1,16 +1,15 @@
 package jdbc.emp.usecases;
 
 import jdbc.emp.model.Employee;
-import jdbc.emp.services.EmployeeServices;
-import jdbc.emp.services.EmployeeServicesImpl;
+import jdbc.emp.service.EmployeeService;
+import jdbc.emp.service.EmployeeServiceImpl;
 
 import java.util.List;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class EmpMain {
     private static Scanner sc = new Scanner(System.in);
-    private static EmployeeServices empSer = new EmployeeServicesImpl();
+    private static EmployeeService empSer = new EmployeeServiceImpl();
 
     public void employeeOperation() {
         while(true){

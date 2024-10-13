@@ -1,4 +1,4 @@
-package jdbc.emp.Exception;
+package jdbc.emp.exception;
 
 public class CarException extends RuntimeException{
     public CarException(String message) {

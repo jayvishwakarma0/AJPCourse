@@ -1,15 +1,15 @@
 package jdbc.emp.usecases;
 
 import jdbc.emp.model.Car;
-import jdbc.emp.services.CarServices;
-import jdbc.emp.services.CarServicesImpl;
+import jdbc.emp.service.CarService;
+import jdbc.emp.service.CarServiceImpl;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class CarMain {
     private static Scanner sc = new Scanner(System.in);
-    private static CarServices carService = new CarServicesImpl();
+    private static CarService carService = new CarServiceImpl();
 
     public void carOperation() {
         while (true) {

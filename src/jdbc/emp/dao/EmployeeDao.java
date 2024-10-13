@@ -1,11 +1,11 @@
-package jdbc.emp.services;
+package jdbc.emp.dao;
 
-import jdbc.emp.Exception.EmployeeException;
+import jdbc.emp.exception.EmployeeException;
 import jdbc.emp.model.Employee;
 
 import java.util.List;
 
-public interface EmployeeServices {
+public interface EmployeeDao {
     public String registerEmp(Employee emp) throws EmployeeException;
     public List<Employee> getAllEmp() throws EmployeeException;
     public Employee getEmpById(int id) throws EmployeeException;

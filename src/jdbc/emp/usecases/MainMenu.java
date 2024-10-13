@@ -3,7 +3,7 @@ package jdbc.emp.usecases;
 import java.util.Scanner;
 
 public class MainMenu {
-    static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         EmpMain empStuff = new EmpMain();
         CarMain carStuff = new CarMain();

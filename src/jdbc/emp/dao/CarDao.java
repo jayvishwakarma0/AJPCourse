@@ -1,6 +1,6 @@
-package jdbc.emp.Dao;
+package jdbc.emp.dao;
 
-import jdbc.emp.Exception.CarException;
+import jdbc.emp.exception.CarException;
 import jdbc.emp.model.Car;
 
 import java.util.List;

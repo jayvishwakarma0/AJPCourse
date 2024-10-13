@@ -1,6 +1,6 @@
-package jdbc.emp.Dao;
+package jdbc.emp.dao;
 
-import jdbc.emp.Exception.EmployeeException;
+import jdbc.emp.exception.EmployeeException;
 import jdbc.emp.model.Employee;
 import jdbc.emp.utility.ConnectionFactory;
 import jdbc.emp.utility.EmpQueryUtil;

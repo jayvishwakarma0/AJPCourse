@@ -1,14 +1,14 @@
-package jdbc.emp.services;
+package jdbc.emp.service;
 
-import jdbc.emp.Dao.CarDao;
-import jdbc.emp.Dao.CarDaoImpl;
-import jdbc.emp.Exception.CarException;
-import jdbc.emp.Exception.EmployeeException;
+import jdbc.emp.dao.CarDao;
+import jdbc.emp.dao.CarDaoImpl;
+import jdbc.emp.exception.CarException;
+import jdbc.emp.exception.EmployeeException;
 import jdbc.emp.model.Car;
 
 import java.util.List;
 
-public class CarServicesImpl implements CarServices{
+public class CarServiceImpl implements CarService {
     CarDao dao = new CarDaoImpl();
     @Override
     public String registerCar(Car c) throws CarException {

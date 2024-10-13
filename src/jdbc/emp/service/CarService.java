@@ -1,12 +1,12 @@
-package jdbc.emp.services;
+package jdbc.emp.service;
 
-import jdbc.emp.Exception.CarException;
-import jdbc.emp.Exception.EmployeeException;
+import jdbc.emp.exception.CarException;
+import jdbc.emp.exception.EmployeeException;
 import jdbc.emp.model.Car;
 
 import java.util.List;
 
-public interface CarServices {
+public interface CarService {
     public String registerCar(Car c) throws CarException;
     public List<Car> getAllCar() throws CarException;
     public List<Car> getAllCarByEmpId(int empId) throws EmployeeException,CarException;

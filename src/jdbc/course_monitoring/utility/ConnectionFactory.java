@@ -1,4 +1,4 @@
-package jdbc.emp.utility;
+package jdbc.course_monitoring.utility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,7 @@ public class ConnectionFactory {
     public Connection getConnection(){
         Connection con = null;
         try{
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/empApp", "root", "Jay@1234");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CourseMonitoring", "root", "Jay@1234");
         } catch (SQLException e){
             e.printStackTrace();
         }

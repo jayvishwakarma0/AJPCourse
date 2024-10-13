@@ -1,13 +1,13 @@
-package jdbc.emp.services;
+package jdbc.emp.service;
 
-import jdbc.emp.Dao.EmployeeDao;
-import jdbc.emp.Dao.EmployeeDaoImpl;
-import jdbc.emp.Exception.EmployeeException;
+import jdbc.emp.dao.EmployeeDao;
+import jdbc.emp.dao.EmployeeDaoImpl;
+import jdbc.emp.exception.EmployeeException;
 import jdbc.emp.model.Employee;
 
 import java.util.List;
 
-public class EmployeeServicesImpl implements EmployeeServices{
+public class EmployeeServiceImpl implements EmployeeService {
     EmployeeDao dao = new EmployeeDaoImpl();
     @Override
     public String registerEmp(Employee emp) throws EmployeeException {
