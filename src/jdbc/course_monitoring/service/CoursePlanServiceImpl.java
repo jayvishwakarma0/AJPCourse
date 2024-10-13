@@ -24,8 +24,8 @@ public class CoursePlanServiceImpl implements CoursePlanService{
         return dao.getCoursePlanByBatchId(batchId);
     }
 
-    public void viewDayWiseUpdate(int batchId) throws CoursePlanException {
-        dao.viewDayWiseUpdate(batchId);
+    public boolean viewDayWiseUpdate(int batchId) throws CoursePlanException {
+        return dao.viewDayWiseUpdate(batchId);
     }
 
     public String updateCoursePlan(int planId, CoursePlan updatedCoursePlan) throws CourseException {

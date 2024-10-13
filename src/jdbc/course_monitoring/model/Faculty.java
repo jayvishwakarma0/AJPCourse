@@ -42,7 +42,7 @@ public class Faculty {
     }
 
     public void setFacultyAddress(String facultyAddress) {
-        facultyAddress = facultyAddress;
+        this.facultyAddress = facultyAddress;
     }
 
     public String getMobileNo() {

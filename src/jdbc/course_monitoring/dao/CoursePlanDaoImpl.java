@@ -56,7 +56,7 @@ public class CoursePlanDaoImpl implements CoursePlanDao {
         return coursePlans;
     }
 
-    public void viewDayWiseUpdate(int batchId) throws CoursePlanException {
+    public boolean viewDayWiseUpdate(int batchId) throws CoursePlanException {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query.viewDayWIseUpdate())) {
             ps.setInt(1,batchId);
@@ -67,10 +67,12 @@ public class CoursePlanDaoImpl implements CoursePlanDao {
                 String status = rs.getString("status");
                 System.out.printf("%-11d | %-30s | %-10s%n", dayNumber, topic, status);
             }
+            return true;
         }
         catch (SQLException e){
             e.printStackTrace();
         }
+        return false;
     }
 
 
