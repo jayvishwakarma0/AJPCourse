@@ -22,8 +22,6 @@ public class AdminDaoImpl implements AdminDao{
             int x = ps.executeUpdate();
             if(x>0){
                 return "Admin Registered Successfully! Now you can login to your account.";
-            } else{
-                return "Error in Admin Registration";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -51,8 +49,6 @@ public class AdminDaoImpl implements AdminDao{
             int x = ps.executeUpdate();
             if(x>0){
                 return "Password Updated Successfully!";
-            } else{
-                return "Error in password updation";
             }
         }catch (SQLException e){
             e.printStackTrace();

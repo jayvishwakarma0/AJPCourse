@@ -27,8 +27,6 @@ public class FacultyDaoImpl implements FacultyDao{
             int x = ps.executeUpdate();
             if(x>0){
                 return "Faculty Added Successfully!";
-            } else{
-                return "Error in Faculty addition";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -101,8 +99,6 @@ public class FacultyDaoImpl implements FacultyDao{
             int x = ps.executeUpdate();
             if(x>0){
                 return "Password Updated Successfully!";
-            } else{
-                return "Error in password updation";
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -123,8 +119,6 @@ public class FacultyDaoImpl implements FacultyDao{
             int x = ps.executeUpdate();
             if(x>0){
                 return "Faculty updated successfully!";
-            } else{
-                System.out.println("Error in updation");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -139,8 +133,6 @@ public class FacultyDaoImpl implements FacultyDao{
             int x = ps.executeUpdate();
             if(x>0){
                 return "Faculty Deleted successfully!";
-            } else{
-                System.out.println("Error in Deletion");
             }
         } catch (SQLException e) {
             e.printStackTrace();

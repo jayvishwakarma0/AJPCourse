@@ -26,8 +26,6 @@ public class CourseDaoImpl implements CourseDao {
             int x = ps.executeUpdate();
             if (x > 0) {
                 return "Course Added Successfully!";
-            } else {
-                return "Error in Course addition";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -83,8 +81,6 @@ public class CourseDaoImpl implements CourseDao {
             int x = ps.executeUpdate();
             if (x > 0) {
                 return "Course Updated Successfully!";
-            } else {
-                return "Error in Updation";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -100,8 +96,6 @@ public class CourseDaoImpl implements CourseDao {
             int x = ps.executeUpdate();
             if (x > 0) {
                 return "Course Deleted Successfully!";
-            } else {
-                return "Error in Deletion";
             }
         } catch (SQLException e) {
             e.printStackTrace();

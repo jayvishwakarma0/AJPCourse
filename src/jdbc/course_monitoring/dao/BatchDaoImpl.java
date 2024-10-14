@@ -21,10 +21,8 @@ public class BatchDaoImpl implements BatchDao {
             ps.setDate(4, (Date) batch.getBatchStartDate());
             ps.setInt(5, batch.getDuration());
             int x = ps.executeUpdate();
-            if(x>0){
+            if (x > 0) {
                 return "Batch Added Successfully!";
-            } else{
-                return "Error in batch addition";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -76,15 +74,13 @@ public class BatchDaoImpl implements BatchDao {
     public String allocateFacultyToBatch(int facultyId, int batchId) throws BatchException {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query.allocateFacultyToBatch())) {
-              ps.setInt(1,facultyId);
-              ps.setInt(2,batchId);
-              int x = ps.executeUpdate();
-              if(x>0){
-                  return "Faculty allocated to batch successfully!";
-              } else{
-                  return "Allocation Failed";
-              }
-        }catch (SQLException e){
+            ps.setInt(1, facultyId);
+            ps.setInt(2, batchId);
+            int x = ps.executeUpdate();
+            if (x > 0) {
+                return "Faculty allocated to batch successfully!";
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
@@ -94,20 +90,17 @@ public class BatchDaoImpl implements BatchDao {
     public String updateBatch(int batchId, Batch batch) throws BatchException {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query.updateBatch())) {
-             ps.setInt(1,batch.getCourseId());
-             ps.setInt(2,batch.getFacultyId());
-             ps.setInt(3,batch.getNumberOfStudents());
-             ps.setDate(4,(Date) batch.getBatchStartDate());
-             ps.setInt(5,batch.getDuration());
-             ps.setInt(6,batchId);
+            ps.setInt(1, batch.getCourseId());
+            ps.setInt(2, batch.getFacultyId());
+            ps.setInt(3, batch.getNumberOfStudents());
+            ps.setDate(4, (Date) batch.getBatchStartDate());
+            ps.setInt(5, batch.getDuration());
+            ps.setInt(6, batchId);
             int x = ps.executeUpdate();
-            if(x>0){
+            if (x > 0) {
                 return "Batch Updated Successfully!";
-            } else{
-                return "Error in Updation";
             }
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
@@ -116,15 +109,12 @@ public class BatchDaoImpl implements BatchDao {
     public String deleteBatch(int batchId) throws BatchException {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query.deleteBatch())) {
-            ps.setInt(1,batchId);
+            ps.setInt(1, batchId);
             int x = ps.executeUpdate();
-            if(x>0){
+            if (x > 0) {
                 return "Batch Deleted Successfully!";
-            } else{
-                return "Error in Deletion";
             }
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;

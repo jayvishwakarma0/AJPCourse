@@ -16,6 +16,7 @@ import java.util.List;
 
 public class CoursePlanDaoImpl implements CoursePlanDao {
     CoursePlanQuery query = new CoursePlanQuery();
+
     public String addCoursePlan(CoursePlan coursePlan) throws CoursePlanException {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query.insertCoursePlan())) {
@@ -24,10 +25,8 @@ public class CoursePlanDaoImpl implements CoursePlanDao {
             ps.setString(3, coursePlan.getTopic());
             ps.setString(4, coursePlan.getStatus());
             int x = ps.executeUpdate();
-            if(x>0){
+            if (x > 0) {
                 return "Course Plan Added Successfully!";
-            } else{
-                return "Error in Course Plan addition";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -59,17 +58,16 @@ public class CoursePlanDaoImpl implements CoursePlanDao {
     public boolean viewDayWiseUpdate(int batchId) throws CoursePlanException {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query.viewDayWIseUpdate())) {
-            ps.setInt(1,batchId);
+            ps.setInt(1, batchId);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 int dayNumber = rs.getInt("dayNumber");
                 String topic = rs.getString("topic");
                 String status = rs.getString("status");
                 System.out.printf("%-11d | %-30s | %-10s%n", dayNumber, topic, status);
             }
             return true;
-        }
-        catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return false;
@@ -83,12 +81,10 @@ public class CoursePlanDaoImpl implements CoursePlanDao {
             ps.setInt(2, coursePlan.getDayNumber());
             ps.setString(3, coursePlan.getTopic());
             ps.setString(4, coursePlan.getStatus());
-            ps.setInt(5,planId);
+            ps.setInt(5, planId);
             int x = ps.executeUpdate();
-            if(x>0){
+            if (x > 0) {
                 return "Course Plan Updated Successfully!";
-            } else{
-                return "Error in updation";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -99,12 +95,10 @@ public class CoursePlanDaoImpl implements CoursePlanDao {
     public String deleteCoursePlan(int planId) throws CoursePlanException {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(query.deleteCoursePlan())) {
-            ps.setInt(1,planId);
+            ps.setInt(1, planId);
             int x = ps.executeUpdate();
-            if(x>0){
+            if (x > 0) {
                 return "Course Plan Deleted Successfully!";
-            } else{
-                return "Error in Deletion";
             }
         } catch (SQLException e) {
             e.printStackTrace();
