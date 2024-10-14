@@ -1,7 +1,6 @@
 package jdbc.course_monitoring.usecases.functionalities;
 
 import jdbc.course_monitoring.model.Batch;
-import jdbc.course_monitoring.model.Course;
 import jdbc.course_monitoring.service.BatchService;
 import jdbc.course_monitoring.service.BatchServiceImpl;
 

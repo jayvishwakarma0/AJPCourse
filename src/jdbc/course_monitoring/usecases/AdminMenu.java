@@ -44,7 +44,7 @@ public class AdminMenu {
                         int option;
                         do{
                             System.out.println("______Admin Options______");
-                            System.out.println("1. Create, Update, View, DeleteCourse.\n" +
+                            System.out.println("1. Create, Update, View, Delete Course.\n" +
                                     "2. Create, Update, View, Delete Batch. \n" +
                                     "3. Create, Update, View, Delete Faculty.\n" +
                                     "4. Create, Update, View, Delete  Course Plan.\n" +
