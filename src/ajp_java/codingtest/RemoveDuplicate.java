@@ -1,12 +1,12 @@
 package ajp_java.codingtest;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 public class RemoveDuplicate {
 
     public static void main(String[] args) {
         int[] arr = {1,2,4,1,4,5,6,3,1,9};
-        HashSet<Integer> set = new HashSet<>();
+        LinkedHashSet<Integer> set = new LinkedHashSet<>();
         for(int val: arr){
             set.add(val);
         }
