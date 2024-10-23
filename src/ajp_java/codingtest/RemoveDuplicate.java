@@ -11,6 +11,14 @@ public class RemoveDuplicate {
             set.add(val);
         }
 
-        System.out.println(set);
+        int[] newArr = new int[set.size()];
+        int i=0;
+        for(int num: set){
+            newArr[i++] = num;
+        }
+
+        for(int num: newArr){
+            System.out.print(num+" ");
+        }
     }
 }
